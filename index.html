@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Тестовое задание</title>
+    <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,600" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <main>
+      <h1 class="title">Выбери своего героя</h1>
+      <div class="promo">
+        <div class="promo-block1 promo-block--left promo-block--left-js">
+          <form class="form form--left form--left-js" id="left" action="https://echo.htmlacademy.ru" method="post">
+            <h2 class="form__title">Alien</h2>
+            <div class="form__wrapper">
+              <label class="form__label" for="name">Имя:</label>
+              <input class="form__input-field form-info__input-field--width" type="text"  id="name">
+            </div>
+            <div class="form__wrapper">
+              <label class="form__label" for="email">E-mail:</label>
+              <input class="form__input-field" type="email" name="email" required>
+            </div>
+            <div class="form__group form__group--type">
+              <span class="form__label form__label--float">Пол</span>
+              <div class="form-type">
+                <label class="form-type__label" for="man">М
+                  <input class="form-type__input" type="radio" name="question-one" id="man" checked>
+                  <span class="form-type__icon"></span>
+                </label>
+                <label class="form-type__label" for="woman">Ж
+                  <input class="form-type__input" type="radio" name="question-two" id="woman">
+                  <span class="form-type__icon"></span>
+                </label>
+              </div>
+            </div>
+            <div class="form__wrapper-info">
+              <a href="#" class="form__btn">Проголосовать</a>
+            </div>
+          </form>
+          <a href="#" class="promo-block__inscription1 promo-block__inscription--left promo-block__inscription--left-js">Alien</a>
+          <picture>
+            <source media="(min-width: 1360px)" srcset="img/alien.jpg 1x, img/alien.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/alien-mobilex.jpg 1x, img/alien-mobile.jpg 2x">
+            <img class="promo-block__img" src="img/alien-mobile.jpg" srcset="img/alien-mobile.jpg 2x"  alt="Alien">
+          </picture>
+        </div>
+        <div class="promo-block2 promo-block--right promo-block--right-js">
+          <a href="#" class="promo-block__inscription2 promo-block__inscription--right promo-block__inscription--right-js">Predator</a>
+          <picture>
+            <source media="(min-width: 1150px)" srcset="img/predator.jpg 1x, img/predator.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/predator-mobile.jpg 1x, img/predator-mobile.jpg 2x">
+            <img class="promo-block__img" src="img/predator-mobile.jpg" srcset="img/predator-mobile.jpg 2x"  alt="Predator">
+          </picture>
+          <form class="form form--right" action="https://echo.htmlacademy.ru" method="post">
+            <h2 class="form__title">Predator</h2>
+            <div class="form__wrapper">
+              <label class="form__label" for="name">Имя:</label>
+              <input class="form__input-field form__input-field--width" type="text"  id="name">
+            </div>
+            <div class="form__wrapper">
+              <label class="form__label" for="email">E-mail:</label>
+              <input class="form__input-field" type="email" name="email" required>
+            </div>
+            <div class="form__group form__group--type">
+              <span class="form__label form__label--float">Пол</span>
+              <div class="form-type">
+                <label class="form-type__label" for="man">М
+                  <input class="form-type__input" type="radio" name="question-one" id="man" checked>
+                  <span class="form-type__icon"></span>
+                </label>
+                <label class="form-type__label" for="woman">Ж
+                  <input class="form-type__input" type="radio" name="question-two" id="woman">
+                  <span class="form-type__icon"></span>
+                </label>
+              </div>
+            </div>
+            <div class="form__wrapper-info">
+              <a href="#" class="form__btn">Проголосовать</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+    <footer class="page-footer">
+      <h2 class="page-footer__title">О проекте</h2>
+      <p class="page-footer__text">2004 год. Спутник корпарации Weyland Industries засекает тепловой всплеск на острове Буве. Судя по тепловой модели, источником тепла является пирамида, сочетающая черты египитской, ацтекской и камбоджийской культуры и построенная, по догадке ученого Себастьяна де Росы (Рауль Бова), первичной цивилизацией. Миллиардер и основатель компании &laquo;Веиланд&raquo; Чарльз Бишеп Веиланд (Лэнс Хенриксен) организовывает экспедицию из группы ученых при участии Алексы Вудс (Сэна Латан) на острове Буве, в то <span class="page-footer__mobile">время как корабль космических охотников приближается к Земле...</span></p>
+    </footer>
+    <script>
+    var navLeft = document.querySelector('.promo-block__inscription--left');
+    var navPromo = document.querySelector('.promo-block1');
+    var inscripRight = document.querySelector('.promo-block__inscription2');
+
+    navLeft.addEventListener('click', function() {
+      if (navPromo.classList.contains('promo-block--left')) {
+        navPromo.classList.remove('promo-block--left');
+        navPromo.classList.add('promo-block--left-js');
+      } else {
+        navPromo.classList.add('promo-block--left');
+        navPromo.classList.remove('promo-block--left-js');
+      }
+    });
+
+    navLeft.addEventListener('click', function() {
+      if (inscripRight.classList.contains('promo-block__inscription--right')) {
+        inscripRight.classList.remove('promo-block__inscription--right');
+        inscripRight.classList.add('promo-block__inscription--right-js');
+      } else {
+        inscripRight.classList.add('promo-block__inscription--right');
+        inscripRight.classList.remove('promo-block__inscription--right-js');
+      }
+    });
+    </script>
+    <script>
+    var navRight = document.querySelector('.promo-block__inscription--right');
+    var navPromoright = document.querySelector('.promo-block2');
+    var inscripLeft = document.querySelector('.promo-block__inscription1');
+
+    navRight.addEventListener('click', function() {
+      if (navPromoright.classList.contains('promo-block--right')) {
+        navPromoright.classList.remove('promo-block--right');
+        navPromoright.classList.add('promo-block--right-js');
+      } else {
+        navPromoright.classList.add('promo-block--right');
+        navPromoright.classList.remove('promo-block--right-js');
+      }
+    });
+
+    navRight.addEventListener('click', function() {
+      if (inscripLeft.classList.contains('promo-block__inscription--left')) {
+        inscripLeft.classList.remove('promo-block__inscription--left');
+        inscripLeft.classList.add('promo-block__inscription--left-js');
+      } else {
+        inscripLeft.classList.add('promo-block__inscription--left');
+        inscripLeft.classList.remove('promo-block__inscription--left-js');
+      }
+    });
+    </script>
+  </body>
+</html>
