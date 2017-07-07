@@ -1,0 +1,9 @@
+.promo {
+  display: flex;
+}
+
+@media ($desktop-width) {
+  .promo {
+    position: relative;
+  }
+}

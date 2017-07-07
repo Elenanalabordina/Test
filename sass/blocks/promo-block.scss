@@ -1,0 +1,337 @@
+.promo-block__inscription1,
+.promo-block__inscription2 {
+  font-size: 36px;
+  font-weight: 400;
+  color: $red;
+  position: absolute;
+  z-index: 10;
+  top: 550px;
+  left: 126px;
+  text-decoration: none;
+  line-height: 50px;
+
+  &:hover {
+    border-bottom: 2px solid $red;
+  }
+}
+.promo-block__inscription--left-js {
+  position: absolute;
+  transform: rotate(270deg);
+  top: 510px;
+  left: -10px;
+  transition-duration: 1s;
+  transition-delay: 6s;
+}
+.promo-block__inscription--left {
+  position: absolute;
+  transform: rotate(0deg);
+  top: 550px;
+  left: 126px;
+}
+.promo-block__inscription--right-js {
+  position: absolute;
+  writing-mode: vertical-lr;
+  top: 510px;
+  left: 275px;
+  transition-duration: 1s;
+  transition-delay: 6s;
+}
+.promo-block__inscription--right {
+  writing-mode: inherit;
+  position: absolute;
+  z-index: 10;
+  top: 550px;
+  left: 103px;
+}
+.promo-block__img {
+  height: 1137px;
+  vertical-align: middle;
+  width: 100%;
+}
+.promo-block1,
+.promo-block2 {
+  width: 50%;
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    height: 739px;
+    background-color: $blue;
+    opacity: 0.9;
+    width: 100%;
+    top: 0;
+  }
+}
+.promo-block--left-js {
+  position: relative;
+  left: 0;
+  top: 0;
+  transition-duration: 7s;
+  transition-delay: 1.2s;
+  z-index: 40;
+
+  .form--left {
+    left: 0;
+    transition-duration: 7s;
+    width: 129%;
+    height: 100%;
+    padding-left: 90px;
+    padding-right: 90px;
+    position: absolute;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    height: 739px;
+    background-color: $blue;
+    opacity: 0;
+    transition-duration: 3s;
+    width: 100%;
+    top: 0;
+  }
+}
+.promo-block--left {
+  position: relative;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  transition-duration: 0.5s;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    height: 1000px;
+    background-color: $blue;
+    opacity: 0.9;
+    width: 100%;
+    top: 0;
+  }
+
+  .form--left {
+    position: absolute;
+    top: 0;
+    left: -860px;
+    background-color: $red;
+    z-index: 60;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 99%;
+    height: 1000px;
+    background-color: $red;
+    width: 2px;
+    top: 104px;
+  }
+}
+.promo-block--right-js {
+  position: relative;
+  right: 0;
+  top: 0;
+  transition-delay: 1.2s;
+  transition-duration: 7s;
+  z-index: 40;
+
+  .form--right {
+    top: 0;
+    right: 0;
+    transition-duration: 7s;
+    width: 129%;
+    height: 100%;
+    padding-left: 90px;
+    padding-right: 90px;
+    position: absolute;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    height: 1000px;
+    background-color: $blue;
+    opacity: 0;
+    transition-duration: 3s;
+    width: 100%;
+    top: 0;
+  }
+}
+.promo-block--right {
+  position: relative;
+  top: 0;
+  right: 0;
+  transition-duration: 0.5s;
+  z-index: 3;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    height: 1000px;
+    background-color: $blue;
+    opacity: 0.9;
+    width: 100%;
+    top: 0;
+  }
+
+  .form--right {
+    position: absolute;
+    top: 0;
+    right: -860px;
+    background-color: $red;
+  }
+}
+
+
+@media ($desktop-width) {
+  .promo-block--left-js {
+    position: absolute;
+    left: 637px;
+    top: 0;
+    transition-duration: 7s;
+    transition-delay: 1.8s;
+    z-index: 40;
+
+    .form--left {
+      top: 0;
+      left: -637px;
+      transition-duration: 3s;
+      width: 499px;
+      height: 628px;
+      padding-left: 90px;
+      padding-right: 90px;
+      position: absolute;
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 0;
+      height: 628px;
+      background-color: $blue;
+      opacity: 0;
+      transition-duration: 3s;
+      width: 683px;
+      top: 0;
+    }
+  }
+  .promo-block--left {
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    transition-duration: 0.5s;
+    width: 686px;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 0;
+      height: 628px;
+      background-color: $blue;
+      opacity: 0.7;
+      width: 683px;
+      top: 0;
+    }
+
+    .form--left {
+      left: -1080px;
+    }
+
+    &::after {
+      height: 580px;
+    }
+  }
+  .promo-block--right-js {
+    position: absolute;
+    right: 637px;
+    top: 0;
+    transition-delay: 1.8s;
+    transition-duration: 7s;
+    z-index: 40;
+
+    .form--right {
+      top: 0;
+      right: -637px;
+      transition-duration: 3s;
+      width: 499px;
+      height: 628px;
+      padding-left: 90px;
+      padding-right: 90px;
+      position: absolute;
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      right: 0;
+      height: 628px;
+      background-color: $blue;
+      opacity: 0;
+      transition-duration: 3s;
+      width: 683px;
+      top: 0;
+    }
+  }
+  .promo-block--right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transition-duration: 0.5s;
+    z-index: 3;
+    width: 686px;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      right: 0;
+      height: 628px;
+      background-color: $blue;
+      opacity: 0.7;
+      width: 683px;
+      top: 0;
+    }
+
+    .form--right {
+      right: -1080px;
+    }
+  }
+  .promo-block__inscription--left-js {
+    top: 321px;
+  }
+  .promo-block__inscription--left {
+    top: 365px;
+    left: 308px;
+  }
+  .promo-block--right .promo-block__inscription {
+    top: 362px;
+    left: 282px;
+  }
+  .promo-block__inscription--right-js {
+    top: 321px;
+    left: 642px;
+  }
+  .promo-block__inscription--right {
+    top: 362px;
+    left: 282px;
+  }
+  .promo-block__img {
+    height: 628px;
+    width: 684px;
+  }
+}

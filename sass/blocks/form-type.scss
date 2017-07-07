@@ -1,0 +1,41 @@
+.form-type__input {
+  display: none;
+}
+.form-type__label {
+  position: relative;
+  display: block;
+  padding: 2px 43px 15px 3px;
+  font-size: 28px;
+  font-weight: 400;
+}
+.form-type__icon {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 32px;
+  border-radius: 50%;
+  margin-top: -20px;
+  width: 25px;
+  height: 25px;
+  background-color: white;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: $red;
+    transform: scale(0);
+    transition-property: transform;
+    transition-duration: 0.2s;
+  }
+}
+.form-type__input:checked + .form-type__icon::before {
+  transform: scale(1);
+}
+.form-type {
+  display: flex;
+}

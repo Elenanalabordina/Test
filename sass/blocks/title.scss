@@ -1,0 +1,15 @@
+.title {
+  font-size: 28px;
+  font-weight: 600;
+  color: $red;
+  position: absolute;
+  z-index: 20;
+  top: 16px;
+  left: 32%;
+}
+
+@media ($desktop-width) {
+  .title {
+    left: 41%;
+  }
+}
